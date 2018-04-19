@@ -25,10 +25,6 @@ var (
 
 func strToPortNumber(val string) (uint16, error) {
 	intVal, err := strconv.ParseUint(val, 10, 16)
-	if err != nil || intVal > maxPort {
-		log.Printf("Invalid port number: %s", val)
-	}
-
 	return uint16(intVal), err
 }
 
